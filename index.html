@@ -11,10 +11,18 @@
         <h1>BM113 Anatomy Online Quiz ʕ·ᴥ·ʔ</h1>
     </header>
     <main id="quiz-container">
-        <section id="questions-container">
+        <div id="mode-selection">
+            <h2>選擇問題模式：</h2>
+            <button onclick="selectMode('group1')">第一組</button>
+            <button onclick="selectMode('group2')">第二組</button>
+            <button onclick="selectMode('group3')">第三組</button>
+            <button onclick="selectMode('group4')">第四組</button>
+            <button onclick="selectMode('all')">全部</button>
+        </div>
+        <section id="questions-container" style="display: none;">
             <!-- Questions will be loaded here -->
         </section>
-        <div class="button-group">
+        <div class="button-group" style="display: none;">
             <button id="submit-btn" onclick="submitAnswers()">Submit</button>
             <button id="retry-btn" onclick="retryQuiz()" style="display: none;">Retry</button>
             <button id="download-btn" onclick="generateDownload()" style="display: none;">Download Result</button>
