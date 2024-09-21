@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Website</title>
+    <title>Anatomy Online Quiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="quiz-container">
-        <div id="question-container">
-            <img id="question-image" alt="Question">
-            <input type="text" id="user-answer" placeholder="Enter your answer">
-            <button onclick="submitAnswer()">Submit</button>
+    <header>
+        <h1>BM113 Anatomy Online Quiz ʕ·ᴥ·ʔ</h1>
+    </header>
+    <main id="quiz-container">
+        <section id="questions-container">
+            <!-- Questions will be loaded here -->
+        </section>
+        <div class="button-group">
+            <button id="submit-btn" onclick="submitAnswers()">Submit</button>
+            <button id="retry-btn" onclick="retryQuiz()" style="display: none;">Retry</button>
+            <button id="download-btn" onclick="generateDownload()" style="display: none;">Download Result</button>
         </div>
         <div id="score-container"></div>
-    </div>
+    </main>
+    <footer>
+        <p>© 2024 Quiz Website. All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

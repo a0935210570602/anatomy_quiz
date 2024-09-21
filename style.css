@@ -1,42 +1,155 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-#quiz-container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
     text-align: center;
 }
 
-#question-image {
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Main Content */
+#quiz-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#questions-container {
+    margin-bottom: 20px;
+}
+
+/* Question Items */
+.question-item {
+    margin-bottom: 15px;
+}
+
+.question-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.question-number {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.question-image {
+    display: block;
     max-width: 100%;
     height: auto;
-    margin-bottom: 15px;
+    margin: 10px 0;
 }
 
-#user-answer {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 16px;
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
+#submit-btn, #retry-btn {
+    background-color: #4CAF50;
     border: none;
-    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
     cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#download-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #45a049;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style and position the submit button */
+#submit-btn, #retry-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white; /* White text */
+    padding: 10px 5px; /* Padding for the button */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#submit-btn:hover, #retry-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+
+/* Responsive Styles */
+@media only screen and (orientation: portrait) {
+    .question-image {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #submit-btn, #retry-btn  {
+        /* width: 10%; */
+        max-width: 60px;
+        margin-bottom: 2px;
+    }
 }
