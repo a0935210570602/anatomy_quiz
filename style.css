@@ -153,3 +153,30 @@ button:hover {
         margin-bottom: 2px;
     }
 }
+
+/* 按鈕樣式 */
+button {
+    background-color: #4CAF50; /* 綠色背景 */
+    border: none; /* 取消邊框 */
+    color: white; /* 字體顏色為白色 */
+    padding: 15px 32px; /* 內邊距 */
+    text-align: center; /* 文字置中 */
+    text-decoration: none; /* 取消下劃線 */
+    display: inline-block; /* 使按鈕在一行內顯示 */
+    font-size: 16px; /* 字體大小 */
+    margin: 10px; /* 外邊距 */
+    cursor: pointer; /* 鼠標變為手型 */
+    border-radius: 8px; /* 圓角 */
+    transition: background-color 0.3s; /* 變化過渡效果 */
+}
+
+/* 鼠標懸停效果 */
+button:hover {
+    background-color: #45a049; /* 懸停時顏色改變 */
+}
+
+/* 按鈕按下效果 */
+button:active {
+    background-color: #3e8e41; /* 按下時顏色改變 */
+    transform: translateY(2px); /* 稍微下移 */
+}
