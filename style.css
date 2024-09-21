@@ -150,11 +150,6 @@ button {
     transition: background-color 0.3s; /* 變化過渡效果 */
 }
 
-/* 鼠標懸停效果 */
-button:hover {
-    background-color: #45a049; /* 懸停時顏色改變 */
-}
-
 /* 按鈕按下效果 */
 button:active {
     background-color: #3e8e41; /* 按下時顏色改變 */
