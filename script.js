@@ -120,15 +120,27 @@ function submitAnswers() {
     }
 }
 
-// Generate download link
+// 生成下载链接的功能
 function generateDownload() {
+    console.log('生成下载链接');
     const { jsPDF } = window.jspdf;
 
+    if (!jsPDF) {
+        console.error('jsPDF 库未加载。');
+        return;
+    }
+
     const doc = new jsPDF();
+    const pageHeight = doc.internal.pageSize.height;
+    const pageWidth = doc.internal.pageSize.width;
+    const margin = 10;
+    const contentWidth = pageWidth - 2 * margin;
+
     let currentQuestionIndex = 0;
 
     function processQuestion() {
         if (currentQuestionIndex >= userAnswers.length) {
+            // 如果所有题目都处理完毕，保存 PDF
             doc.save('result.pdf');
             return;
         }
@@ -138,17 +150,51 @@ function generateDownload() {
         const userAnswerText = `Your Answer: ${answer.userAnswer || 'No Answer'}`;
         const correctAnswerText = `Correct Answer: ${answer.correctAnswer}`;
 
-        // Add user answer
-        doc.setTextColor(answer.isCorrect ? 0 : 255, 0, 0); // Red if incorrect
-        doc.text(questionNumberText, 10, 10 + currentQuestionIndex * 30);
-        doc.text(userAnswerText, 10, 20 + currentQuestionIndex * 30);
-        doc.text(correctAnswerText, 10, 30 + currentQuestionIndex * 30);
+        // 添加用户作答
+        if (!answer.isCorrect || answer.userAnswer === '') {
+            // 错误的或未回答的答案显示为红色
+            doc.setTextColor(255, 0, 0); // 红色
+        } else {
+            doc.setTextColor(0, 0, 0); // 黑色
+        }
+        
+        // 添加题号
+        doc.text(questionNumberText, margin, margin + 10);
+        doc.text(userAnswerText, margin, margin + 30);
 
-        currentQuestionIndex++;
-        processQuestion(); // Call to process the next question
+        // 添加正确答案
+        doc.setTextColor(0, 0, 0); // 恢复颜色
+        if (!answer.isCorrect) {
+            doc.setTextColor(255, 0, 0); // 错误答案显示为红色
+        }
+        doc.text(correctAnswerText, margin, margin + 40);
+
+        // 处理题目图片
+        const imageUrl = `data/${selectedGroup}/images/${answer.question}`; // 使用 selectedGroup
+        const img = new Image();
+        img.src = imageUrl;
+
+        img.onload = function() {
+            const imgWidth = contentWidth * 0.8; // 將圖片寬度設為內容寬度的 80%
+            const imgHeight = (img.height * imgWidth) / img.width; // 按比例調整高度
+
+            // 如果图片高度加上当前内容超出页面高度，则调整位置
+            let imageY = margin + 50;
+            if (imageY + imgHeight > pageHeight - margin) {
+                doc.addPage();
+                imageY = margin; // 重置图片 Y 位置
+            }
+
+            doc.addImage(img, 'JPEG', margin, imageY, imgWidth, imgHeight); // 添加图片
+            
+            // 更新 Y 位置，为下一个问题准备
+            currentQuestionIndex++;
+            doc.addPage(); // 添加新页面以准备下一个问题
+            processQuestion(); // 递归调用处理下一个问题
+        };
     }
 
-    // Start processing questions
+    // 开始处理问题
     processQuestion();
 }
 
