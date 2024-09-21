@@ -4,6 +4,28 @@ let score = 0;
 const userAnswers = []; // Array to store user answers
 let selectedGroup = ''; // Variable to store selected group
 
+// 定義轉換規則的函數
+function convertAnswer(answer) {
+    answer = answer.toLowerCase();  // 轉換為小寫
+    answer = answer.replace('m.', 'muscle');   
+    answer = answer.replace('n.', 'nerve');   
+    answer = answer.replace('a.', 'artery');   
+    answer = answer.replace('v.', 'vein');   
+    answer = answer.replace('lig.', 'ligament');   
+    answer = answer.replace('ant.', 'anterior');   
+    answer = answer.replace('post.', 'posterior');   
+    answer = answer.replace('sup.', 'superior');   
+    answer = answer.replace('inf.', 'inferior');   
+    answer = answer.replace('med.', 'medial');   
+    answer = answer.replace('lat.', 'lateral');   
+    answer = answer.replace('br.', 'branch');   
+    // 去掉 '(' 及其後面的內容
+    if (answer.includes('(')) {
+        answer = answer.split('(')[0].trim(); // 去掉 '(' 及其後的內容，並去除前後空格
+    }
+    return answer;
+}
+
 // Select mode and load questions
 function selectMode(group) {
     selectedGroup = group; // Store the selected group
@@ -90,7 +112,7 @@ function submitAnswers() {
     let correctAnswersCount = 0;
 
     userAnswersElements.forEach((input, index) => {
-        const userAnswer = input.value.trim().toLowerCase();
+        const userAnswer = convertAnswer(input.value.trim());
         const correctAnswer = questions[currentQuestionIndex - 5 + index].answer.toLowerCase();
 
         userAnswers.push({

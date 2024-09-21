@@ -1,11 +1,11 @@
 [
     {
         "image": "abductor digiti minimi m..jpg",
-        "answer": "abductor digiti minimi m."
+        "answer": "abductor digiti minimi muscle"
     },
     {
         "image": "abductor pollicis brevis m..jpg",
-        "answer": "abductor pollicis brevis m."
+        "answer": "abductor pollicis brevis muscle"
     },
     {
         "image": "adductor pollicis oblique head.jpg",
@@ -17,7 +17,7 @@
     },
     {
         "image": "ant. interosseous a..jpg",
-        "answer": "ant. interosseous a."
+        "answer": "anterior interosseous artery"
     },
     {
         "image": "aorta.jpg",
@@ -25,23 +25,23 @@
     },
     {
         "image": "Axillary a..jpg",
-        "answer": "Axillary a."
+        "answer": "axillary artery"
     },
     {
         "image": "Axillary n..jpg",
-        "answer": "Axillary n."
+        "answer": "axillary nerve"
     },
     {
         "image": "Axillary v..jpg",
-        "answer": "Axillary v."
+        "answer": "axillary vein"
     },
     {
         "image": "Brachial a.(2).jpg",
-        "answer": "Brachial a.(2)"
+        "answer": "brachial artery"
     },
     {
         "image": "Brachial a..jpg",
-        "answer": "Brachial a."
+        "answer": "brachial artery"
     },
     {
         "image": "brachiocephalic trunk.jpg",
@@ -49,7 +49,7 @@
     },
     {
         "image": "brachiocephalic v..jpg",
-        "answer": "brachiocephalic v."
+        "answer": "brachiocephalic vein"
     },
     {
         "image": "cardiac impression.jpg",
@@ -61,23 +61,23 @@
     },
     {
         "image": "common carotid a..jpg",
-        "answer": "common carotid a."
+        "answer": "common carotid artery"
     },
     {
         "image": "common interosseous a..jpg",
-        "answer": "common interosseous a."
+        "answer": "common interosseous artery"
     },
     {
         "image": "common palmar digital a..jpg",
-        "answer": "common palmar digital a."
+        "answer": "common palmar digital artery"
     },
     {
         "image": "deep branch of ulnar n.(2).jpg",
-        "answer": "deep branch of ulnar n.(2)"
+        "answer": "deep branch of ulnar nerve"
     },
     {
         "image": "deep branch of ulnar n..jpg",
-        "answer": "deep branch of ulnar n."
+        "answer": "deep branch of ulnar nerve"
     },
     {
         "image": "deep palmar arch.jpg",
@@ -85,7 +85,7 @@
     },
     {
         "image": "flexor digiti minimi m..jpg",
-        "answer": "flexor digiti minimi m."
+        "answer": "flexor digiti minimi muscle"
     },
     {
         "image": "flexor digitorum profundus.jpg",
@@ -97,7 +97,7 @@
     },
     {
         "image": "flexor pollicis brevis m..jpg",
-        "answer": "flexor pollicis brevis m."
+        "answer": "flexor pollicis brevis muscle"
     },
     {
         "image": "groove for arch of aorta.jpg",
@@ -105,7 +105,7 @@
     },
     {
         "image": "groove for arch of azygos v..jpg",
-        "answer": "groove for arch of azygos v."
+        "answer": "groove for arch of azygos vein"
     },
     {
         "image": "groove for descending aorta.jpg",
@@ -117,7 +117,7 @@
     },
     {
         "image": "groove for subclavian a..jpg",
-        "answer": "groove for subclavian a."
+        "answer": "groove for subclavian artery"
     },
     {
         "image": "groove for superior vena cava.jpg",
@@ -129,11 +129,11 @@
     },
     {
         "image": "internal thoracic a..jpg",
-        "answer": "internal thoracic a."
+        "answer": "internal thoracic artery"
     },
     {
         "image": "left primary bronchus(1).jpg",
-        "answer": "left primary bronchus(1)"
+        "answer": "left primary bronchus"
     },
     {
         "image": "left primary bronchus.jpg",
@@ -141,7 +141,7 @@
     },
     {
         "image": "left recurrent laryngeal n..jpg",
-        "answer": "left recurrent laryngeal n."
+        "answer": "left recurrent laryngeal nerve"
     },
     {
         "image": "ligamentum arteriosum.jpg",
@@ -153,71 +153,71 @@
     },
     {
         "image": "lumbrical m..jpg",
-        "answer": "lumbrical m."
+        "answer": "lumbrical muscle"
     },
     {
         "image": "median n.(1).jpg",
-        "answer": "median n.(1)"
+        "answer": "median nerve"
     },
     {
         "image": "Median n..jpg",
-        "answer": "Median n."
+        "answer": "median nerve"
     },
     {
         "image": "middle cardiac v..jpg",
-        "answer": "middle cardiac v."
+        "answer": "middle cardiac vein"
     },
     {
         "image": "Musculocutaneous n.(2).jpg",
-        "answer": "Musculocutaneous n.(2)"
+        "answer": "musculocutaneous nerve"
     },
     {
         "image": "Musculocutaneous n..jpg",
-        "answer": "Musculocutaneous n."
+        "answer": "musculocutaneous nerve"
     },
     {
         "image": "opponens digiti minimi m..jpg",
-        "answer": "opponens digiti minimi m."
+        "answer": "opponens digiti minimi muscle"
     },
     {
         "image": "opponens pollicis m..jpg",
-        "answer": "opponens pollicis m."
+        "answer": "opponens pollicis muscle"
     },
     {
         "image": "palmaris brevis m..jpg",
-        "answer": "palmaris brevis m."
+        "answer": "palmaris brevis muscle"
     },
     {
         "image": "pericardiacophrenic a..jpg",
-        "answer": "pericardiacophrenic a."
+        "answer": "pericardiacophrenic artery"
     },
     {
         "image": "pericardiacophrenic v..jpg",
-        "answer": "pericardiacophrenic v."
+        "answer": "pericardiacophrenic vein"
     },
     {
         "image": "phrenic n..jpg",
-        "answer": "phrenic n."
+        "answer": "phrenic nerve"
     },
     {
         "image": "post. interosseous a..jpg",
-        "answer": "post. interosseous a."
+        "answer": "posterior interosseous artery"
     },
     {
         "image": "posterior interventricular a..jpg",
-        "answer": "posterior interventricular a."
+        "answer": "posterior interventricular artery"
     },
     {
         "image": "pulmonary a.(1).jpg",
-        "answer": "pulmonary a.(1)"
+        "answer": "pulmonary artery"
     },
     {
         "image": "pulmonary a.(2).jpg",
-        "answer": "pulmonary a.(2)"
+        "answer": "pulmonary artery"
     },
     {
         "image": "pulmonary a..jpg",
-        "answer": "pulmonary a."
+        "answer": "pulmonary artery"
     },
     {
         "image": "pulmonary ligament.jpg",
@@ -225,23 +225,23 @@
     },
     {
         "image": "pulmonary v..jpg",
-        "answer": "pulmonary v."
+        "answer": "pulmonary vein"
     },
     {
         "image": "Radial a..jpg",
-        "answer": "Radial a."
+        "answer": "radial artery"
     },
     {
         "image": "Radial n..jpg",
-        "answer": "Radial n."
+        "answer": "radial nerve"
     },
     {
         "image": "recurrent branch of median n..jpg",
-        "answer": "recurrent branch of median n."
+        "answer": "recurrent branch of median nerve"
     },
     {
         "image": "recurrent interosseous a..jpg",
-        "answer": "recurrent interosseous a."
+        "answer": "recurrent interosseous artery"
     },
     {
         "image": "right lower lobe.jpg",
@@ -261,7 +261,7 @@
     },
     {
         "image": "subclavian a..jpg",
-        "answer": "subclavian a."
+        "answer": "subclavian artery"
     },
     {
         "image": "superficial palmar arch.jpg",
@@ -273,14 +273,14 @@
     },
     {
         "image": "Ulnar a..jpg",
-        "answer": "Ulnar a."
+        "answer": "ulnar artery"
     },
     {
         "image": "Ulnar n..jpg",
-        "answer": "Ulnar n."
+        "answer": "ulnar nerve"
     },
     {
         "image": "vagus n..jpg",
-        "answer": "vagus n."
+        "answer": "vagus nerve"
     }
 ]
