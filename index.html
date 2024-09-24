@@ -47,9 +47,11 @@
         // 計算距離 9/30 還有幾天
         const targetDate = new Date('2024-09-30');
         const today = new Date();
+        today.setHours(0, 0, 0, 0); // 設置為午夜（00:00）
         const timeDifference = targetDate - today;
-        const daysRemaining = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+        const daysRemaining = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
         document.getElementById('days-remaining').innerText = `距離 9/30 還有 ${daysRemaining} 天`;
     </script>
+    
 </body>
 </html>
