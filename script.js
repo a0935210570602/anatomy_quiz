@@ -3,7 +3,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 const userAnswers = []; // Array to store user answers
 let selectedGroup = ''; // Variable to store selected group
-
+let total_count = 0;    
 // 定義轉換規則的函數
 function convertAnswer(answer) {
     answer = answer.toLowerCase();  // 轉換為小寫
@@ -46,6 +46,7 @@ function loadQuestions(group) {
     currentQuestionIndex = 0; // Reset current question index
     score = 0; // Reset score
 
+    total_count = parseInt(document.getElementById('question-count').value); // Get the user input for question count
     let dataFilePath = '';
 
     switch (group) {
@@ -102,6 +103,13 @@ function loadQuestionsBatch() {
             `;
             questionsContainer.innerHTML += questionHTML;
             currentQuestionIndex++;
+            console.log('total_count:', total_count);
+            console.log('currentQuestionIndex:', currentQuestionIndex);
+            console.log(typeof total_count); // 輸出: "number"
+            if(total_count<=currentQuestionIndex) {
+                questions.length = total_count;
+                break;
+            }
         }
     }
 }
@@ -221,14 +229,66 @@ function generateDownload() {
 }
 
 // Retry the quiz
-function retryQuiz() {
+// Retry the quiz
+function returnQuiz() {
     currentQuestionIndex = 0;
     score = 0;
-    userAnswers.length = 0; // Clear user answers
-    document.getElementById('questions-container').style.display = 'block';
+    userAnswers.length = 0; // 清空用戶答案
+
+    // 顯示模式選擇區域
+    document.getElementById('mode-selection').style.display = 'block'; // 顯示模式選擇
+    const questionsContainer = document.getElementById('questions-container');
+    questionsContainer.style.display = 'none'; // 隱藏問題容器
+
+    // 重置分數顯示
     document.getElementById('score-container').innerHTML = '';
-    document.getElementById('submit-btn').style.display = 'block'; // Show Submit button again
-    document.getElementById('retry-btn').style.display = 'none'; // Hide Retry button
-    document.getElementById('download-btn').style.display = 'none'; // Hide Download button
-    loadQuestions(selectedGroup); // Reload the questions for the same selected group
+
+    // 顯示重試和下載按鈕
+    document.getElementById('submit-btn').style.display = 'none'; // 隱藏提交按鈕
+    document.getElementById('retry-btn').style.display = 'none'; // 隱藏重試按鈕
+    document.getElementById('download-btn').style.display = 'none'; // 隱藏下載按鈕
 }
+
+// Function to count and display the number of questions per group
+function updateQuestionCounts() {
+    const groups = ['group1', 'group2', 'group3', 'group4', 'all'];
+    
+    groups.forEach(group => {
+        let dataFilePath = '';
+
+        // Set the path for each group's data
+        switch (group) {
+            case 'group1':
+                dataFilePath = 'data/group1/image_data.json';
+                break;
+            case 'group2':
+                dataFilePath = 'data/group2/image_data.json';
+                break;
+            case 'group3':
+                dataFilePath = 'data/group3/image_data.json';
+                break;
+            case 'group4':
+                dataFilePath = 'data/group4/image_data.json';
+                break;
+            case 'all':
+                dataFilePath = 'data/all.json';
+                break;
+        }
+
+        // Fetch the data and count the number of questions
+        fetch(dataFilePath)
+            .then(response => response.json())
+            .then(data => {
+                const questionCount = data.length;  // Count the number of questions
+                document.getElementById(`${group}-count`).textContent = questionCount;
+            })
+            .catch(error => {
+                console.error(`Failed to load data for ${group}:`, error);
+            });
+    });
+}
+
+// Call the function when the page loads
+window.onload = function() {
+    updateQuestionCounts();
+};

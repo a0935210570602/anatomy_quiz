@@ -2,7 +2,8 @@ import os
 import json
 
 # 設定圖片資料夾名稱
-image_folder = "data/group4/images"
+folder_name = 'group3'
+image_folder = f"data/{folder_name}/images"
 
 # 構建包含圖片名稱和答案的列表
 data_list = []
@@ -18,7 +19,7 @@ for filename in os.listdir(image_folder):
         data_list.append(item)
 
 # 將列表保存為 JSON 文件
-json_filename = "image_data.json"
+json_filename = f"./data/{folder_name}/image_data.json"
 with open(json_filename, 'w', encoding='utf-8') as json_file:
     json.dump(data_list, json_file, ensure_ascii=False, indent=4)
 

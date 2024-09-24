@@ -110,7 +110,25 @@ button:hover {
 }
 
 /* Style and position the submit button */
-#submit-btn, #retry-btn {
+#retry-btn {
+    position: fixed;
+    bottom: 200px;
+    right: 20px;
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white; /* White text */
+    padding: 10px 5px; /* Padding for the button */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#submit-btn{
     position: fixed;
     bottom: 100px;
     right: 20px;
