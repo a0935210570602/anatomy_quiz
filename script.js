@@ -46,7 +46,9 @@ function loadQuestions(group) {
     currentQuestionIndex = 0; // Reset current question index
     score = 0; // Reset score
 
-    total_count = parseInt(document.getElementById('question-count').value); // Get the user input for question count
+    let total_count = document.getElementById('question-count').value.trim(); // Get the user input for question count
+    total_count = total_count === '' ? 1000 : parseInt(total_count); // If input is empty, set to 1000
+
     let dataFilePath = '';
 
     switch (group) {
