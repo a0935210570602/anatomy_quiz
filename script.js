@@ -46,8 +46,9 @@ function loadQuestions(group) {
     currentQuestionIndex = 0; // Reset current question index
     score = 0; // Reset score
 
-    let total_count = document.getElementById('question-count').value.trim(); // Get the user input for question count
-    total_count = total_count === '' ? 1000 : parseInt(total_count); // If input is empty, set to 1000
+    input = document.getElementById('question-count').value.trim(); // Get the user input for question count
+    
+    total_count = (input === null || input === '') ? 1000 : parseInt(input) ; // If input is empty, set to 1000
 
     let dataFilePath = '';
 
@@ -105,9 +106,7 @@ function loadQuestionsBatch() {
             `;
             questionsContainer.innerHTML += questionHTML;
             currentQuestionIndex++;
-            console.log('total_count:', total_count);
-            console.log('currentQuestionIndex:', currentQuestionIndex);
-            console.log(typeof total_count); // 輸出: "number"
+
             if(total_count<=currentQuestionIndex) {
                 questions.length = total_count;
                 break;
