@@ -3,7 +3,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 const userAnswers = []; // Array to store user answers
 let selectedGroup = ''; // Variable to store selected group
-let total_count = 0;    
+let total_count = 1000;    
 // 定義轉換規則的函數
 function convertAnswer(answer) {
     answer = answer.toLowerCase();  // 轉換為小寫
