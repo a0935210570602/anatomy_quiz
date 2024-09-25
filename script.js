@@ -38,6 +38,8 @@ function selectMode(group) {
     buttonGroup.style.display = 'block'; // Show button group
 
     loadQuestions(selectedGroup); // Load questions based on selected group
+    document.getElementById('submit-btn').style.display = 'block'; // 隱藏提交按鈕
+    
 }
 
 // Load questions based on selected group
@@ -245,7 +247,7 @@ function returnQuiz() {
     document.getElementById('score-container').innerHTML = '';
 
     // 顯示重試和下載按鈕
-    document.getElementById('submit-btn').style.display = 'none'; // 隱藏提交按鈕
+    // document.getElementById('submit-btn').style.display = 'block'; // 隱藏提交按鈕
     document.getElementById('retry-btn').style.display = 'none'; // 隱藏重試按鈕
     document.getElementById('download-btn').style.display = 'none'; // 隱藏下載按鈕
 }
