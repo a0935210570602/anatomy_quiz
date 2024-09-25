@@ -2,7 +2,7 @@ import os
 import json
 
 # 設定圖片資料夾名稱
-folder_name = 'group3'
+folder_name = 'group4'
 image_folder = f"data/{folder_name}/images"
 
 # 構建包含圖片名稱和答案的列表

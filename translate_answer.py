@@ -1,7 +1,7 @@
 import json
 
 # 讀取 JSON 文件
-folder_name = 'group3'
+folder_name = 'group4'
 with open(f'./data/{folder_name}/image_data.json', 'r', encoding='utf-8') as file:
     data = json.load(file)
 

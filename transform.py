@@ -52,6 +52,6 @@ def batch_convert_to_jpg(input_directory, output_directory):
             print(f"跳過不支持的文件格式: {filename}")
 
 # 使用範例：
-input_directory = './data/group3/images'  # "第一組" 目錄路徑
-output_directory = './data/group3/images1'  # "轉換後" 目錄路徑
+input_directory = './data/group4/images'  # "第一組" 目錄路徑
+output_directory = './data/group4/images1'  # "轉換後" 目錄路徑
 batch_convert_to_jpg(input_directory, output_directory)

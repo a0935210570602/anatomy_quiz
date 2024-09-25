@@ -56,6 +56,10 @@
         "answer": "brachioradialis"
     },
     {
+        "image": "bronchi.jpg",
+        "answer": "bronchi"
+    },
+    {
         "image": "bronchial a..jpg",
         "answer": "bronchial artery"
     },
@@ -240,6 +244,10 @@
         "answer": "hemiazygos vein"
     },
     {
+        "image": "inferior vena cava.jpg",
+        "answer": "inferior vena cava"
+    },
+    {
         "image": "lateral cutaneous n. of forearm.jpg",
         "answer": "lateral cutaneous nerve of forearm"
     },
@@ -372,16 +380,12 @@
         "answer": "pulmonary ligament"
     },
     {
-        "image": "pulmonary vein. .jpg",
-        "answer": "pulmonary veinerve "
+        "image": "pulmonary vein(1).jpg",
+        "answer": "pulmonary vein"
     },
     {
         "image": "pulmonary vein.jpg",
         "answer": "pulmonary vein"
-    },
-    {
-        "image": "pulmonary veins.jpg",
-        "answer": "pulmonary veins"
     },
     {
         "image": "radial artery(1).jpg",
@@ -412,10 +416,6 @@
         "answer": "right coronary artery"
     },
     {
-        "image": "right main bronchus.jpg",
-        "answer": "right main bronchus"
-    },
-    {
         "image": "right marginal artery.jpg",
         "answer": "right marginal artery"
     },
@@ -424,8 +424,8 @@
         "answer": "right vagus nerve"
     },
     {
-        "image": "septomarginal trabecula(moderator band) .jpg",
-        "answer": "septomarginal trabecula"
+        "image": "septomarginal trabecula or moderator band .jpg",
+        "answer": "septomarginal trabecula or moderator band "
     },
     {
         "image": "short head of biceps brachii.jpg",
